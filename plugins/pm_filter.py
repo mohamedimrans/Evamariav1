@@ -675,6 +675,12 @@ async def auto_filter(client, msg, spoll=False):
                InlineKeyboardButton('⚠️ How To I Download ⚠️', url='https://t.me/Get_Movies_Here2/2')
             ],
         )
+        
+        btn.append(
+            [ 
+               InlineKeyboardButton('⚠️ How To I Download ⚠️', url='https://t.me/Get_Movies_Here2/2')
+            ],
+        )
     else:
         btn.append(
             [ 
@@ -683,6 +689,12 @@ async def auto_filter(client, msg, spoll=False):
             ],
 
 
+        )
+        
+        btn.append(
+            [ 
+               InlineKeyboardButton('⚠️ How To I Download ⚠️', url='https://t.me/Get_Movies_Here2/2')
+            ],
         )
     imdb = await get_poster(search, file=(files[0]).file_name) if settings["imdb"] else None
     TEMPLATE = settings['template']
