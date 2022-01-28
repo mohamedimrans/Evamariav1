@@ -95,6 +95,13 @@ async def next_page(bot, query):
              InlineKeyboardButton(f"📃 Pages {round(int(offset) / 10) + 1} / {round(total / 10)}",
                                   callback_data="pages")]
         )
+        
+        btn.append(
+            [ 
+               InlineKeyboardButton('⚠️ How To I Download ⚠️', url='https://t.me/Get_Movies_Here2/2')
+            ],
+        )
+
     elif off_set is None:
         btn.append(
             [InlineKeyboardButton(f"🗓 {round(int(offset) / 10) + 1} / {round(total / 10)}", callback_data="pages"),
