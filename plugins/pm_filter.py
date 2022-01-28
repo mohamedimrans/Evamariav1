@@ -102,6 +102,12 @@ async def next_page(bot, query):
             ],
         )
 
+        btn.append(
+            [ 
+               InlineKeyboardButton('⚡Join For New Movies ⚡', url='https://t.me/+vSBkR_T-tAVlNjU1')
+            ],
+        )
+
     elif off_set is None:
         btn.append(
             [InlineKeyboardButton(f"🗓 {round(int(offset) / 10) + 1} / {round(total / 10)}", callback_data="pages"),
@@ -110,6 +116,12 @@ async def next_page(bot, query):
         btn.append(
             [ 
                InlineKeyboardButton('⚠️ How To I Download ⚠️', url='https://t.me/Get_Movies_Here2/2')
+            ],
+        )
+
+        btn.append(
+            [ 
+               InlineKeyboardButton('⚡Join For New Movies ⚡', url='https://t.me/+vSBkR_T-tAVlNjU1')
             ],
         )
     else:
@@ -124,6 +136,12 @@ async def next_page(bot, query):
         btn.append(
             [ 
                InlineKeyboardButton('⚠️ How To I Download ⚠️', url='https://t.me/Get_Movies_Here2/2')
+            ],
+        )
+
+        btn.append(
+            [ 
+               InlineKeyboardButton('⚡Join For New Movies ⚡', url='https://t.me/+vSBkR_T-tAVlNjU1')
             ],
         )
 
@@ -700,6 +718,12 @@ async def auto_filter(client, msg, spoll=False):
                InlineKeyboardButton('⚠️ How To I Download ⚠️', url='https://t.me/Get_Movies_Here2/2')
             ],
         )
+
+        btn.append(
+            [ 
+               InlineKeyboardButton('⚡Join For New Movies ⚡', url='https://t.me/+vSBkR_T-tAVlNjU1')
+            ],
+        )
     else:
         btn.append(
             [ 
@@ -712,6 +736,12 @@ async def auto_filter(client, msg, spoll=False):
         btn.append(
             [ 
                InlineKeyboardButton('⚠️ How To I Download ⚠️', url='https://t.me/Get_Movies_Here2/2')
+            ],
+        )
+
+        btn.append(
+            [ 
+               InlineKeyboardButton('⚡Join For New Movies ⚡', url='https://t.me/+vSBkR_T-tAVlNjU1')
             ],
         )
     imdb = await get_poster(search, file=(files[0]).file_name) if settings["imdb"] else None
@@ -747,9 +777,10 @@ async def auto_filter(client, msg, spoll=False):
             rating=imdb['rating'],
             url=imdb['url'],
             **locals()
+            **@PocketMoviesOfficial**
         )
     else:
-        cap = f"Here is what i found for your query {search}"
+        cap = f"Here is what i found for your query {search} **Join @PocketMoviesOfficial**"
     if imdb and imdb.get('poster'):
         try:
             await message.reply_photo(photo=imdb.get('poster'), caption=cap[:1024],
@@ -805,7 +836,7 @@ async def advantage_spell_chok(msg):
     movielist += [(re.sub(r'(\-|\(|\)|_)', '', i, flags=re.IGNORECASE)).strip() for i in gs_parsed]
     movielist = list(dict.fromkeys(movielist))  # removing duplicates
     if not movielist:
-        k = await msg.reply("I couldn't find anything related to that. Check your spelling")
+        k = await msg.reply("I couldn't find anything related to that 👇 இதில் ஏதாவதா ?. Check your spelling")
         await asyncio.sleep(8)
         await k.delete()
         return
