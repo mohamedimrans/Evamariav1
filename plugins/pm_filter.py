@@ -777,7 +777,6 @@ async def auto_filter(client, msg, spoll=False):
             rating=imdb['rating'],
             url=imdb['url'],
             **locals()
-            **@PocketMoviesOfficial**
         )
     else:
         cap = f"Here is what i found for your query {search} **Join @PocketMoviesOfficial**"
