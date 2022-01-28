@@ -99,6 +99,12 @@ async def next_page(bot, query):
         btn.append(
             [InlineKeyboardButton(f"🗓 {round(int(offset) / 10) + 1} / {round(total / 10)}", callback_data="pages"),
              InlineKeyboardButton("NEXT ⏩", callback_data=f"next_{req}_{key}_{n_offset}")])
+        
+        btn.append(
+            [ 
+               InlineKeyboardButton('⚠️ How To I Download ⚠️', url='https://t.me/Get_Movies_Here2/2')
+            ],
+        )
     else:
         btn.append(
             [
@@ -107,6 +113,13 @@ async def next_page(bot, query):
                 InlineKeyboardButton("NEXT ⏩", callback_data=f"next_{req}_{key}_{n_offset}")
             ],
         )
+        
+        btn.append(
+            [ 
+               InlineKeyboardButton('⚠️ How To I Download ⚠️', url='https://t.me/Get_Movies_Here2/2')
+            ],
+        )
+
     try:
         await query.edit_message_reply_markup(
             reply_markup=InlineKeyboardMarkup(btn)
