@@ -121,7 +121,7 @@ async def next_page(bot, query):
 
         btn.append(
             [ 
-               InlineKeyboardButton('⚡Join For New Movies ⚡', url='https://t.me/+vSBkR_T-tAVlNjU1')
+               InlineKeyboardButton('⚡Join For New Movies ⚡', url='https://t.me/+1BF_9uY_JEVhNGE1')
             ],
         )
     else:
@@ -141,7 +141,7 @@ async def next_page(bot, query):
 
         btn.append(
             [ 
-               InlineKeyboardButton('⚡Join For New Movies ⚡', url='https://t.me/+vSBkR_T-tAVlNjU1')
+               InlineKeyboardButton('⚡Join For New Movies ⚡', url='https://t.me/+1BF_9uY_JEVhNGE1')
             ],
         )
 
@@ -721,7 +721,7 @@ async def auto_filter(client, msg, spoll=False):
 
         btn.append(
             [ 
-               InlineKeyboardButton('⚡Join For New Movies ⚡', url='https://t.me/+vSBkR_T-tAVlNjU1')
+               InlineKeyboardButton('⚡Join For New Movies ⚡', url='https://t.me/+1BF_9uY_JEVhNGE1')
             ],
         )
     else:
@@ -741,7 +741,7 @@ async def auto_filter(client, msg, spoll=False):
 
         btn.append(
             [ 
-               InlineKeyboardButton('⚡Join For New Movies ⚡', url='https://t.me/+vSBkR_T-tAVlNjU1')
+               InlineKeyboardButton('⚡Join For New Movies ⚡', url='https://t.me/+1BF_9uY_JEVhNGE1')
             ],
         )
     imdb = await get_poster(search, file=(files[0]).file_name) if settings["imdb"] else None
