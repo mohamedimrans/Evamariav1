@@ -871,31 +871,39 @@ async def manual_filters(client, message, text=False):
                 try:
                     if fileid == "None":
                         if btn == "[]":
-                            await client.send_message(group_id, reply_text, disable_web_page_preview=True)
+                            Boss1 = await client.send_message(group_id, reply_text, disable_web_page_preview=True)
+                            await asyncio.sleep(120)
+                            await Boss1.delete()
                         else:
                             button = eval(btn)
-                            await client.send_message(
+                            Boss2 = await client.send_message(
                                 group_id,
                                 reply_text,
                                 disable_web_page_preview=True,
                                 reply_markup=InlineKeyboardMarkup(button),
                                 reply_to_message_id=reply_id
                             )
+                            await asyncio.sleep(120)
+                            await Boss2.delete()
                     elif btn == "[]":
-                        await client.send_cached_media(
+                        Boss3 = await client.send_cached_media(
                             group_id,
                             fileid,
                             caption=reply_text or "",
                             reply_to_message_id=reply_id
                         )
+                        await asyncio.sleep(120)
+                        await Boss3.delete()
                     else:
                         button = eval(btn)
-                        await message.reply_cached_media(
+                        Boss4 = await message.reply_cached_media(
                             fileid,
                             caption=reply_text or "",
                             reply_markup=InlineKeyboardMarkup(button),
                             reply_to_message_id=reply_id
                         )
+                        await asyncio.sleep(120)
+                        await Boss4.delete()
                 except Exception as e:
                     logger.exception(e)
                 break
